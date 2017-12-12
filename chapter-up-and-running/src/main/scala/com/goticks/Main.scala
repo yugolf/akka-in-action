@@ -3,16 +3,16 @@ package com.goticks
 
 import scala.concurrent.Future
 
-import akka.actor.{ ActorSystem , Actor, Props }
+import akka.actor.ActorSystem
 import akka.event.Logging
 import akka.util.Timeout
 
 import akka.http.scaladsl.Http
 import akka.http.scaladsl.Http.ServerBinding
-import akka.http.scaladsl.server.Directives._
 import akka.stream.ActorMaterializer
 
 import com.typesafe.config.{ Config, ConfigFactory }
+import scala.util.{ Failure, Success }
 
 
 
@@ -20,24 +20,26 @@ import com.typesafe.config.{ Config, ConfigFactory }
 object Main extends App
     with RequestTimeout {
 
-  val config = ConfigFactory.load() 
-  val host = config.getString("http.host") // Gets the host and a port from the configuration
+  val config = ConfigFactory.load()
+  val host = config.getString("http.host") // 設定からホスト名とポートを取得
   val port = config.getInt("http.port")
 
-  implicit val system = ActorSystem() 
-  implicit val ec = system.dispatcher  //bindAndHandle requires an implicit ExecutionContext
+  implicit val system = ActorSystem()
+  implicit val ec = system.dispatcher  // bindAndHandleは暗黙のExecutionContextが必要
 
   val api = new RestApi(system, requestTimeout(config)).routes // the RestApi provides a Route
- 
+
   implicit val materializer = ActorMaterializer()
   val bindingFuture: Future[ServerBinding] =
-    Http().bindAndHandle(api, host, port) //Starts the HTTP server
- 
+    Http().bindAndHandle(api, host, port) // HTTPサーバーの起動
+
   val log =  Logging(system.eventStream, "go-ticks")
   bindingFuture.map { serverBinding =>
     log.info(s"RestApi bound to ${serverBinding.localAddress} ")
-  }.onFailure { 
-    case ex: Exception =>
+  }.onComplete {
+    case Success(_) =>
+      log.info("Success to bind to {}:{}", host, port)
+    case Failure(ex) =>
       log.error(ex, "Failed to bind to {}:{}!", host, port)
       system.terminate()
   }
