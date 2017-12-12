@@ -16,6 +16,8 @@ lazy val futures     = project.in(file("chapter-futures"))
 
 lazy val integration = project.in(file("chapter-integration"))
 
+lazy val java = project.in(file("chapter-java"))
+
 lazy val looking     = project.in(file("chapter-looking-ahead"))
 
 lazy val persistence = project.in(file("chapter-persistence"))
