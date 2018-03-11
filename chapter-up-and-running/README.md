@@ -1,11 +1,11 @@
-Akka in Action workshop
+Akka in Action([Akka実践バイブル](https://www.shoeisha.co.jp/book/detail/9784798153278)) workshop
 =================
 
 This is a project for [Akka in Action workshop](http://2018.scalamatsuri.org/en/candidates/YugoMaede_1/) at Scala Matsuri 2018.
 
 ## The Preparation
 
-You can try create an Akka application at this workshop, if you prepare the following tools.
+You can try creating an Akka application at this workshop, if you prepare the following tools.
 
 ### 1. Git
 
