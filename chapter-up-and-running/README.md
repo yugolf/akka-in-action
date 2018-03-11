@@ -116,7 +116,7 @@ http POST localhost:5000/events/RHCP tickets:=10
 
 ### ex.2
 ```
-$sbt run
+sbt run
 ```
 
 ```
@@ -126,7 +126,7 @@ http POST localhost:5000/events/RHCP/tickets tickets:=2
 
 ### ex.3
 ```
-$sbt run
+sbt run
 ```
 
 ```
@@ -137,7 +137,7 @@ http GET localhost:5000/events/
 
 ### ex.4
 ```
-$sbt run
+sbt run
 ```
 
 ```
