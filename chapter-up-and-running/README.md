@@ -67,7 +67,7 @@ That's all for your preparation!
 
 ----
 
-## The command using this workshop
+## The commands using this workshop
 
 #### Run the app
 ```
