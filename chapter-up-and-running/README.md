@@ -15,7 +15,7 @@ https://git-scm.com/downloads
 #### Checking your installation
 
 ```
-git clone git@github.com:akka-ja/akka-in-action.
+git clone git@github.com:akka-ja/akka-in-action.git
 ```
 
 ### 2. sbt
