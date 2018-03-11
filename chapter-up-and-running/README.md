@@ -34,7 +34,7 @@ cd akka-in-action/chapter-up-and-running/
 sbt run
 ```
 
-### The tool which send HTTP requests
+### 3. The tool which send HTTP requests
 
 You can ether use a CLI tool or a GUI tool.
 
@@ -56,6 +56,10 @@ https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfg
 ##### Checking your installation
 
 ![](images/AdvancedRESTclient.png)
+
+### 4. IntelliJ IDEA(option)
+##### Install
+https://www.jetbrains.com/idea/download/
 
 
 That's all for your preparation!
