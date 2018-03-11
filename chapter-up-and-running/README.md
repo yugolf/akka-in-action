@@ -3,7 +3,7 @@ Akka in Action([Akka実践バイブル](https://www.shoeisha.co.jp/book/detail/9
 
 This is a project for [Akka in Action workshop](http://2018.scalamatsuri.org/en/candidates/YugoMaede_1/) at Scala Matsuri 2018.
 
-## The Preparation
+## The preparation
 
 You can try creating an Akka application at this workshop, if you prepare the following tools.
 
