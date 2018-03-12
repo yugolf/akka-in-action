@@ -21,10 +21,10 @@ git clone git@github.com:akka-ja/akka-in-action.git
 ### 2. sbt
 #### Install
 ##### Mac
-https://www.scala-sbt.org/1.x/docs/Installing-sbt-on-Mac.html
+https://www.scala-sbt.org/0.13/docs/Installing-sbt-on-Mac.html
 
 ##### Windows
-https://www.scala-sbt.org/1.x/docs/Installing-sbt-on-Windows.html
+https://www.scala-sbt.org/0.13/docs/Installing-sbt-on-Windows.html
 
 #### Checking your installation
 You need execute the command on the same directory with executing the previous git command.
@@ -56,6 +56,10 @@ https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfg
 ##### Checking your installation
 
 ![](images/AdvancedRESTclient.png)
+
+* You can copy the followings
+    * (2) http://localhost:5000/events/RHCP
+    * (6) {"name":"RHCP","tickets":10}
 
 ### 4. IntelliJ IDEA(option)
 ##### Install
