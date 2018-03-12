@@ -59,7 +59,7 @@ https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfg
 
 * You can copy the followings
     * (2) http://localhost:5000/events/RHCP
-    * (6) {"name":"RHCP","tickets":10}
+    * (6) {"tickets":10}
 
 ### 4. IntelliJ IDEA(option)
 ##### Install
